@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','PagesController@root')->name('root');
 Auth::routes(['verify' => true]);
-
+Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 //// 用户身份验证相关的路由
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 //Route::post('login', 'Auth\LoginController@login');

@@ -40,3 +40,5 @@ Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 //Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 //Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::resource('categories','CategoriesController',['only'=> ['show']]);

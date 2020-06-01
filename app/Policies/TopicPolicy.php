@@ -16,4 +16,10 @@ class TopicPolicy extends Policy
     {
         return $user->isAuthorOf($topic);
     }
+
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
+    }
+
 }
